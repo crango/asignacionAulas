@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+body{
+    background-color: white;
+}
+header{
+    background:black;
+    display: flex;
+    padding: 18px;
+}
+h1{
+    color:white;
+    text-align: left;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 30px;
+    padding: 0px 0px 0px 10px;
+}
+nav{
+    width: 100%;
+    background-color: #E5E0DE;
+    height: 40px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+#menu-nav{
+    margin: 0;
+    width: 100px;
+    overflow: hidden;
+    background-color: #E5E0DE;
+}
+.menu{
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+.menu li{
+    list-style: none;
+    cursor: pointer;
+    padding: 9px;
+    transition: all 0.1s ease 0s;
+}
+.menu li:hover{
+    background-color: #00B849;
+}
+
+.menu .ul-second{
+    position: absolute;
+    display: none;
+    transform: translateY(10px);
+}
+.menu .ul-second > li{
+    border-bottom: solid 1px #fff;
+    text-align: center;
+    background-color: #E5E0DE;
+    padding: 20px;
+    width: 150px;
+    transform: translateX(-20px);
+    padding: 10px;
+}
+.menu .ul-second > li:hover{
+    background-color: #00B849;
+}
+
+.menu .reserva:hover > .ul-second{
+    display: block;
+}
+.menu .ul-third{
+    position: absolute;
+    right: 0;
+    top: 42px;
+    transform: translateX(102px);
+    display: none;
+    background-color: #E5E0DE;
+}
+.menu .ul-third > li{
+    padding: 10px;
+    border-bottom: solid 1px #fff;
+}
+.menu .compartida:hover > .ul-third{
+    display: block;
+}
