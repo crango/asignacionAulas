@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<header>
-    <h1>Sistema de asignación de aulas</h1>
-</header>
-<nav>
-    <section id="menu-nav">
-        <ul class="menu">
+    <header>
+        <h1>Sistema de asignación de aulas</h1>
+    </header>
+    <nav>
+        <section id="menu-nav">
+            <ul class="menu">
                 <li class="reserva">Reservas
                     <ul class="ul-second">
                         <li><a class="individual" href="/vista/solicitud.php">Individual</a></li>
@@ -29,8 +31,10 @@
                 </li>
                 <li>Seguimientos</li>
                 <li>Otros</li>
-        </ul>
-    </section>
-</nav>
+                <li class="right"><a class="individual" href="/vista/destroy.php">Cerrar Sesion</a></li>
+            </ul>
+        </section>
+    </nav>
 </body>
+
 </html>
