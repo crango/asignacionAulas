@@ -26,7 +26,7 @@
                         <li><a class="pendientes" href="/vista/vistaDetRevi.php">Revisadas</a></li>
                     </ul>
                 </li>
-                <li class="right"><a class="individual" href="/vista/destroy.php">Cerrar Sesion</a></li>
+                <li class="right"><a class="individual" href="../vista/destroy.php">Cerrar Sesion</a></li>
             </ul>
         </section>
     </nav>

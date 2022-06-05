@@ -17,23 +17,24 @@ $resultado->execute();
 $usuario = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
 if (!empty($usuario)) {
-    session_start();
-    $_SESSION["username"] = $username;
-    $_SESSION["password"] = $password;
+    if (!isset($_SESSION)) {
+        session_start();
+    }
     $_SESSION["id_docente"] = $usuario[0]["id_docente"];
-    $_SESSION["ci_docente"] = $usuario[0]["id_docente"];
-    $_SESSION["nombre_docente"] = $usuario[0]["nombre"];
-    $_SESSION["correo"] = $usuario[0]["apellido"];
-    $_SESSION["usuario"] = $usuario[0]["id_carrera"];
-    $_SESSION["is_admin"] = $usuario[0]["id_tipo_docente"];
+    $_SESSION["ci_docente"] = $usuario[0]["ci_docente"];
+    $_SESSION["nombre_docente"] = $usuario[0]["nombre_docente"];
+    $_SESSION["correo"] = $usuario[0]["correo"];
+    $_SESSION["usuario"] = $usuario[0]["usuario"];
+    $_SESSION["password"] = $usuario[0]["password"];
+    $_SESSION["is_admin"] = $usuario[0]["is_admin"];
 
     if ($_SESSION["is_admin"] == 1) {
         echo "<script> alert('Bienvenido Administrador'); </script>";
-        header("Location: ../vista/homeAdministrativo.php");
+        header("Location: /vista/homeAdministrativo.php");
     } else {
         echo "<script> alert('Bienvenido Docente'); </script>";
-        header("Location: ../vista/homeDocente.php");
+        header("Location: /vista/homeDocente.php");
     }
 } else {
-    header("Location: ../../login.php");
+    header("Location: ../login.php");
 }

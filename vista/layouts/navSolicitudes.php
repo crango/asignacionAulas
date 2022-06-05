@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +16,21 @@
 
 <body>
     <header>
-        <h1>Sistema de asignación de aulas</h1>
+        <div class="pull-left">
+            <h1>Sistema de asignación de aulas</h1>
+        </div>
+        <div class="pull-right">
+            <ul class="nav nav-tabs nav-pills">
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nombre_docente'] ?></a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Perfil</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../vista/destroy.php">Cerrar Sesion</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </header>
     <nav>
         <section id="menu-nav">
@@ -31,7 +48,7 @@
                 </li>
                 <li>Seguimientos</li>
                 <li>Otros</li>
-                <li class="right"><a class="individual" href="/vista/destroy.php">Cerrar Sesion</a></li>
+                <li class="right"><a class="individual" href="../vista/destroy.php">Cerrar Sesion</a></li>
             </ul>
         </section>
     </nav>

@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_SESSION["usuario"])) {
+    if ($_SESSION["is_admin"] == 1) {
+        header("Location: /vista/homeAdministrativo.php");
+    } else {
+        header("Location: /vista/homeDocente.php");
+    }
+}
+?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -38,19 +48,16 @@
                             <h3 class="text-center text-info">Iniciar Sesion</h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Usuario:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
+                                <input type="text" name="username" id="username" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Contraseña:</label><br>
-                                <input type="text" name="password" id="password" class="form-control" required>
+                                <input type="password" name="password" id="password" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-info"><span>Recuerdame</span> <span>
                                         <input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="Ingresar">
-                            </div>
-                            <div id="register-link" class="text-right">
-                                <a href="#" class="text-info">Registrese Aqui</a>
                             </div>
                         </form>
                     </div>
